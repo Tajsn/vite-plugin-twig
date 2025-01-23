@@ -1,0 +1,58 @@
+{
+  "name": "@fulcrumsaas/vite-plugin-twig",
+  "version": "2.2.1",
+  "license": "MIT",
+  "keywords": [
+    "vite-plugin",
+    "twig"
+  ],
+  "author": "Colyn Brown <colyn.brown@fulcrumsaas.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fulcrum-SaaS/vite-plugin-twig.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Fulcrum-SaaS/vite-plugin-twig/issues"
+  },
+  "homepage": "https://github.com/Fulcrum-SaaS/vite-plugin-twig#readme",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "*.ts"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "yarn lint && unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint .",
+    "start": "yarn dev && cd playground && yarn dev"
+  },
+  "dependencies": {
+    "twig": "^1.15.4"
+  },
+  "peerDependencies": {
+    "vite": "^5.0.11"
+  },
+  "devDependencies": {
+    "@fiad/eslint-config": "^1.0.3",
+    "@types/node": "^18.6.2",
+    "@types/twig": "^1.12.9",
+    "eslint": "^8.20.0",
+    "rollup": "^2.77.2",
+    "typescript": "^4.7.4",
+    "unbuild": "^0.7.6",
+    "vite": "^5.0.11"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
